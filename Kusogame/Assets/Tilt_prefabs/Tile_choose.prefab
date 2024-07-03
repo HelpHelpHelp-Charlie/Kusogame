@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3643112415520791083}
   m_Layer: 0
   m_Name: adder
-  m_TagString: Untagged
+  m_TagString: add
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25, y: 1, z: 0}
-  m_LocalScale: {x: 0.5, y: 2.5, z: 0.01}
+  m_LocalScale: {x: 0.45, y: 2.5, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2663099923936664716}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9177f2903086c3c488ffba4a42a6b586, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,7 +102,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -118,7 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085811e4406549f4ba4d4a89148c467d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 8719815515458160247}
+  positive: {r: 1, g: 0, b: 0, a: 0.39215687}
+  negative: {r: 0, g: 0, b: 1, a: 0.39215687}
   add_number: 0
+  main_Chara: {fileID: 0}
 --- !u!1 &2972977361947798934
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +138,7 @@ GameObject:
   - component: {fileID: 3327726364326149569}
   m_Layer: 0
   m_Name: adder (1)
-  m_TagString: Untagged
+  m_TagString: add
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +153,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.25, y: 1, z: 0}
-  m_LocalScale: {x: 0.5, y: 2.5, z: 0.01}
+  m_LocalScale: {x: 0.45, y: 2.5, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2663099923936664716}
@@ -182,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9177f2903086c3c488ffba4a42a6b586, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,7 +225,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -237,7 +241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085811e4406549f4ba4d4a89148c467d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 8576977228018448490}
+  positive: {r: 1, g: 0, b: 0, a: 0.39215687}
+  negative: {r: 0, g: 0, b: 1, a: 0.39215687}
   add_number: 0
+  main_Chara: {fileID: 0}
 --- !u!1 &8298012096022521420
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 8576977228018448490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 2, z: 0}
+  m_LocalPosition: {x: -0.25, y: 2, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 0.20040081}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -434,7 +442,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 1
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 0
@@ -471,7 +479,7 @@ Transform:
   m_GameObject: {fileID: 8719815515458160247}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 2, z: 0}
+  m_LocalPosition: {x: 0.25, y: 2, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 0.20040081}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -531,7 +539,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 1
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 0

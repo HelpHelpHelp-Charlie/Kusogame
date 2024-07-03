@@ -23,11 +23,9 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if(playerTransform.position.z>zSpawn-sightDistance*tiltLength && zSpawn<=tiltLength*total_game_tile+7){
             spawnTile(UnityEngine.Random.Range(2,TiltPrefabs.Length));
-            Debug.Log("Hello");
+            //Debug.Log("Hello");
         }
 
     }
