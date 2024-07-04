@@ -19,6 +19,7 @@ public class mainChara_control : MonoBehaviour
         var sub=Instantiate(sub_chara, this.transform);
         sub.transform.SetParent(this.transform);
         sub.GetComponent<follow_parent>().Local_position=new UnityEngine.Vector3(0,0,0);
+        sub.GetComponent<follow_parent>().refreshPOS();
     }
 
     // Update is called once per frame
@@ -59,20 +60,22 @@ public class mainChara_control : MonoBehaviour
             Debug.Log("transform.childCount: " +Count);
             int remainder=Count%row_count;
             int quotient = Count/row_count;
-            Debug.Log("quotient: " +quotient);
-            Debug.Log("remainder: " +remainder);
+            //Debug.Log("quotient: " +quotient);
+            //Debug.Log("remainder: " +remainder);
             for(int i=0;i<quotient;i++){
                 Debug.Log("i: " +i);
                 for(int j=0;j<row_count;j++){
                     transform_list[i*row_count+j].GetComponent<follow_parent>().Local_position=
                     new UnityEngine.Vector3(((int)(row_count/2)+1-j)*offset,0,-offset*i);
+                    transform_list[i*row_count+j].GetComponent<follow_parent>().refreshPOS();
                 }
             }
             for(int j=0;j<remainder;j++){
                 Debug.Log("j: " +j);
                 int now=(quotient*row_count+j);
-                Debug.Log("(quotient)*5+j: " +now);
+                ///Debug.Log("(quotient)*5+j: " +now);
                 transform_list[quotient*row_count+ j].GetComponent<follow_parent>().Local_position=new UnityEngine.Vector3(((int)(row_count/2)+1-j)*offset,0,-offset*quotient);
+                transform_list[quotient*row_count+ j].GetComponent<follow_parent>().refreshPOS();
             }
         }
     }
